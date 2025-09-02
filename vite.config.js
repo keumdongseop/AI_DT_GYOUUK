@@ -4,6 +4,9 @@ export default defineConfig({
   root: './작업실',
   server: {
     port: 3000,  // 프론트엔드 포트
+    hmr: {
+      overlay: false  // Disable error overlay - won't crash the page
+    },
     watch: {
       usePolling: true,  // Better for Codespaces
       interval: 1000     // Check for changes every second
